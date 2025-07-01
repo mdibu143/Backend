@@ -15,3 +15,7 @@ app.add_middleware(
 @app.get("/api/data")
 def get_data():
     return {"message": "Hello from FastAPI backend!"}
+
+@app.get("/")
+def health():
+    return {"message": "App is Ok"}
