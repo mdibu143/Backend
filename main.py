@@ -12,10 +12,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.get("/api/data")
+@app.get("/api/datas")
 def get_data():
     return {"message": "Hello from FastAPI backend!"}
 
 @app.get("/")
 def health():
     return {"message": "App is Ok"}
+
+@app.get("/api/show")
+def health():
+    return {"message": "I am going to provide show"}
